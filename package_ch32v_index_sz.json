@@ -112,7 +112,11 @@
                             "size": "507269"
                         },
                         {
-                            "host": "i686-mingw32"
+                            "host": "i686-mingw32",
+                            "url": "https://raw.githubusercontent.com/verylowfreq/board_manager_ch32/dev/empty.zip",
+                            "archiveFileName": "wch_beforeinstall_windows-1.0.0.tar.gz",
+                            "checksum": "SHA-256:0F8F99A6B5F8F197E9BA5F5150BE28F87D23797EB13328FE8035A81D4E826F33",
+                            "size": "164"
                         },
                         {
                             "host": "x86_64-apple-darwin",
