@@ -14,8 +14,8 @@
                     "category": "Contributed",
                     "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4-sz5/arduino_core_ch32_sz-1.0.4+sz5.zip",
                     "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz5.zip",
-                    "checksum": "SHA-256:D1F419077393ACFE937914AE9A8412F0A8D4807E1F007829082C38A4E5231871",
-                    "size": "2033202",
+                    "checksum": "SHA-256:263B7E35BC4100E7EE73D548948B89360C0329FB5CEBD5CAE439202D90286155",
+                    "size": "2103126",
                     "boards": [
                         {
                             "name": "CH32V Boards by M.S."
