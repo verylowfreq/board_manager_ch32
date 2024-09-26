@@ -10,9 +10,9 @@ UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/ma
 
 
 MY_VERSION = "1.0.4"
-MY_VERSION_APPENDIX = "+sz5"
+MY_VERSION_APPENDIX = "+sz6"
 MY_VERSION_FULL = f"{MY_VERSION}{MY_VERSION_APPENDIX}"
-MY_ARCHIVE_URL = "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4-sz5/arduino_core_ch32_sz-1.0.4+sz5.zip"
+MY_ARCHIVE_URL = "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz6/arduino_core_ch32_sz-1.0.4+sz6.zip"
 MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}{MY_VERSION_APPENDIX}.zip"
 
 
