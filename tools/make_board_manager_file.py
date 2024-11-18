@@ -10,7 +10,7 @@ UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/ma
 
 
 MY_VERSION = "1.0.4"
-MY_VERSION_APPENDIX = "+sz7"
+MY_VERSION_APPENDIX = "+sz8"
 MY_VERSION_FULL = f"{MY_VERSION}{MY_VERSION_APPENDIX}"
 MY_ARCHIVE_URL = f"https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/{MY_VERSION_FULL}/arduino_core_ch32_sz-{MY_VERSION_FULL}.zip"
 MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}{MY_VERSION_APPENDIX}.zip"
@@ -27,26 +27,26 @@ my_core_definition = f"""
           "checksum": "",
           "size": "",
           "boards": [
-            {{"name": "CH32V Boards by M.S."}}
+            {{"name": "CH32V203 Suzuno32RV, Suzuduino UNO"}}
           ],
           "toolsDependencies": [
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "riscv-none-embed-gcc",
               "version": "8.2.0"
             }},
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "openocd",
               "version": "1.0.0"
             }},
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "beforeinstall",
               "version": "1.0.0"
             }},
             {{
-                "packager": "WCH",
+                "packager": "WCH_sz",
                 "name": "wchisp",
                 "version": "0.2.3+sz1"
             }}
@@ -165,6 +165,9 @@ def replace_beforeinstall(src:Any) -> Any:
 
     return src
 
+def replace_board_name(src:Any) -> Any:
+    src["packages"][0]["name"] = "WCH_sz"
+    return src
 
 def main() -> None:
 
@@ -194,6 +197,7 @@ def main() -> None:
     upstream_defs['packages'][0]['tools'].append(tools)
 
     mydefs = replace_beforeinstall(upstream_defs)
+    mydefs = replace_board_name(mydefs)
 
     # print(json.dumps(upstream_defs, indent=4, separators=(',', ': ')))
 
