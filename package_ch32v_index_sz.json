@@ -1,7 +1,7 @@
 {
     "packages": [
         {
-            "name": "WCH",
+            "name": "WCH_sz",
             "websiteURL": "https://www.wch.cn/",
             "maintainer": "verylowfreq",
             "email": "",
@@ -10,35 +10,35 @@
                 {
                     "name": "CH32V Boards by M.S.",
                     "architecture": "ch32v",
-                    "version": "1.0.4+sz6",
+                    "version": "1.0.4+sz8",
                     "category": "Contributed",
-                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz6/arduino_core_ch32_sz-1.0.4+sz6.zip",
-                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz6.zip",
-                    "checksum": "SHA-256:9967581704232AD9F26920AE2EE501EABDB4871B057C8C4FBEFBC4229192758C",
-                    "size": "2080666",
+                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz8/arduino_core_ch32_sz-1.0.4+sz8.zip",
+                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz8.zip",
+                    "checksum": "SHA-256:2C5BED7090CFAA42B7D9D9F719057D61F07D9FEE43BF45C77BB198C9DD84378B",
+                    "size": "2037290",
                     "boards": [
                         {
-                            "name": "CH32V Boards by M.S."
+                            "name": "CH32V203 Suzuno32RV, Suzuduino UNO"
                         }
                     ],
                     "toolsDependencies": [
                         {
-                            "packager": "WCH",
+                            "packager": "WCH_sz",
                             "name": "riscv-none-embed-gcc",
                             "version": "8.2.0"
                         },
                         {
-                            "packager": "WCH",
+                            "packager": "WCH_sz",
                             "name": "openocd",
                             "version": "1.0.0"
                         },
                         {
-                            "packager": "WCH",
+                            "packager": "WCH_sz",
                             "name": "beforeinstall",
                             "version": "1.0.0"
                         },
                         {
-                            "packager": "WCH",
+                            "packager": "WCH_sz",
                             "name": "wchisp",
                             "version": "0.2.3+sz1"
                         }
