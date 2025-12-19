@@ -10,9 +10,9 @@ UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/ma
 
 
 MY_VERSION = "1.0.4"
-MY_VERSION_APPENDIX = "+sz6"
+MY_VERSION_APPENDIX = "+sz9"
 MY_VERSION_FULL = f"{MY_VERSION}{MY_VERSION_APPENDIX}"
-MY_ARCHIVE_URL = "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz6/arduino_core_ch32_sz-1.0.4+sz6.zip"
+MY_ARCHIVE_URL = f"https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/{MY_VERSION_FULL}/arduino_core_ch32_sz-{MY_VERSION_FULL}.zip"
 MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}{MY_VERSION_APPENDIX}.zip"
 
 
@@ -27,26 +27,26 @@ my_core_definition = f"""
           "checksum": "",
           "size": "",
           "boards": [
-            {{"name": "CH32V Boards by M.S."}}
+            {{"name": "CH32V203 Suzuno32RV, Suzuduino UNO"}}
           ],
           "toolsDependencies": [
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "riscv-none-embed-gcc",
               "version": "8.2.0"
             }},
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "openocd",
               "version": "1.0.0"
             }},
             {{
-              "packager": "WCH",
+              "packager": "WCH_sz",
               "name": "beforeinstall",
               "version": "1.0.0"
             }},
             {{
-                "packager": "WCH",
+                "packager": "WCH_sz",
                 "name": "wchisp",
                 "version": "0.2.3+sz1"
             }}
@@ -154,6 +154,20 @@ def process_core(src:Any) -> Any:
     print(f'Core definition updated.')
     return src
 
+def replace_beforeinstall(src:Any) -> Any:
+    tools = src["packages"][0]["tools"]
+    beforeinstall_systems = [ tool for tool in tools if tool["name"] == "beforeinstall" ][0]["systems"]
+    beforeinstall_windows = [ host for host in beforeinstall_systems if host["host"] == "i686-mingw32"][0]
+    beforeinstall_windows["url"] = "https://raw.githubusercontent.com/verylowfreq/board_manager_ch32/dev/empty.zip"
+    beforeinstall_windows["archiveFileName"] = "empty.zip"
+    beforeinstall_windows["checksum"] = "SHA-256:0F8F99A6B5F8F197E9BA5F5150BE28F87D23797EB13328FE8035A81D4E826F33"
+    beforeinstall_windows["size"] = "164"
+
+    return src
+
+def replace_board_name(src:Any) -> Any:
+    src["packages"][0]["name"] = "WCH_sz"
+    return src
 
 def main() -> None:
 
@@ -182,9 +196,10 @@ def main() -> None:
 
     upstream_defs['packages'][0]['tools'].append(tools)
 
-    # print(json.dumps(upstream_defs, indent=4, separators=(',', ': ')))
+    mydefs = replace_beforeinstall(upstream_defs)
+    mydefs = replace_board_name(mydefs)
 
-    mydefs = upstream_defs
+    # print(json.dumps(upstream_defs, indent=4, separators=(',', ': ')))
 
     with open(my_json_file, "w") as f:
         json.dump(mydefs, f, indent=4, separators=(',', ': '))
