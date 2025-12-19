@@ -10,6 +10,43 @@
                 {
                     "name": "CH32V Boards by M.S.",
                     "architecture": "ch32v",
+                    "version": "1.0.4+sz9",
+                    "category": "Contributed",
+                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz9/arduino_core_ch32_sz-1.0.4+sz9.zip",
+                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz9.zip",
+                    "checksum": "SHA-256:3DB8E8F5066D601E7FE572A539CB97EA0DA7549511568F651A034D81C9E645C4",
+                    "size": "2415607",
+                    "boards": [
+                        {
+                            "name": "CH32V203 Suzuno32RV, Suzuduino UNO"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "WCH_sz",
+                            "name": "riscv-none-embed-gcc",
+                            "version": "8.2.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "openocd",
+                            "version": "1.0.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "beforeinstall",
+                            "version": "1.0.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "wchisp",
+                            "version": "0.2.3+sz1"
+                        }
+                    ]
+                },
+                {
+                    "name": "CH32V Boards by M.S.",
+                    "architecture": "ch32v",
                     "version": "1.0.4+sz8",
                     "category": "Contributed",
                     "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz8/arduino_core_ch32_sz-1.0.4+sz8.zip",
