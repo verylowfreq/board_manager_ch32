@@ -10,12 +10,12 @@
                 {
                     "name": "CH32V Boards by M.S.",
                     "architecture": "ch32v",
-                    "version": "1.0.4+sz9",
+                    "version": "2.0.0",
                     "category": "Contributed",
-                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz9/arduino_core_ch32_sz-1.0.4+sz9.zip",
-                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz9.zip",
-                    "checksum": "SHA-256:3DB8E8F5066D601E7FE572A539CB97EA0DA7549511568F651A034D81C9E645C4",
-                    "size": "2415607",
+                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/2.0.0/arduino_core_ch32_sz-2.0.0.zip",
+                    "archiveFileName": "arduino_core_ch32_sz-2.0.0.zip",
+                    "checksum": "SHA-256:8760EF4C68BA85E7471C9D214E86F31BB3C0423DDDAD83414B7EA71BB695FE97",
+                    "size": "2540837",
                     "boards": [
                         {
                             "name": "CH32V203 Suzuno32RV, Suzuduino UNO"
@@ -40,19 +40,19 @@
                         {
                             "packager": "WCH_sz",
                             "name": "wchisp",
-                            "version": "0.2.3+sz1"
+                            "version": "0.3.0"
                         }
                     ]
                 },
                 {
                     "name": "CH32V Boards by M.S.",
                     "architecture": "ch32v",
-                    "version": "1.0.4+sz8",
+                    "version": "1.0.4+sz9",
                     "category": "Contributed",
-                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz8/arduino_core_ch32_sz-1.0.4+sz8.zip",
-                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz8.zip",
-                    "checksum": "SHA-256:2C5BED7090CFAA42B7D9D9F719057D61F07D9FEE43BF45C77BB198C9DD84378B",
-                    "size": "2037290",
+                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/1.0.4+sz9/arduino_core_ch32_sz-1.0.4+sz9.zip",
+                    "archiveFileName": "arduino_core_ch32_sz-1.0.4+sz9.zip",
+                    "checksum": "SHA-256:3DB8E8F5066D601E7FE572A539CB97EA0DA7549511568F651A034D81C9E645C4",
+                    "size": "2415607",
                     "boards": [
                         {
                             "name": "CH32V203 Suzuno32RV, Suzuduino UNO"
@@ -166,28 +166,28 @@
                 },
                 {
                     "name": "wchisp",
-                    "version": "0.2.3+sz1",
+                    "version": "0.3.0",
                     "systems": [
                         {
                             "host": "x86_64-linux-gnu",
-                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-linux-x64.tar.gz",
-                            "archiveFileName": "wchisp-v0.2.3-linux-x64.tar.gz",
-                            "checksum": "SHA-256:B83C7CECF8B786D973CDF09D80869DA0CCBA48F22FED04CC753F15410F9C5DBC",
-                            "size": "829359"
+                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-linux-x64.tar.gz",
+                            "archiveFileName": "wchisp-v0.3.0-linux-x64.tar.gz",
+                            "checksum": "SHA-256:67E3D4EB0FFD3CC610D8927E3C3F452E2110531A3F14405DCAEF87DF219F200D",
+                            "size": "883953"
                         },
                         {
                             "host": "i686-mingw32",
-                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-win-x64.zip",
-                            "archiveFileName": "wchisp-v0.2.3-win-x64.zip",
-                            "checksum": "SHA-256:E17AC0AE743E25C080A539E6BB407C993E87583D4D6AEDDCC0CD92EE681CC6CD",
-                            "size": "629251"
+                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-win-x64.zip",
+                            "archiveFileName": "wchisp-v0.3.0-win-x64.zip",
+                            "checksum": "SHA-256:EBA605BBC62F217F6454E7236D04EF1B8A6B4396DD7CE8DC26FC83016213C3AA",
+                            "size": "681807"
                         },
                         {
                             "host": "x86_64-apple-darwin",
-                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-macos-x64.zip",
-                            "archiveFileName": "wchisp-v0.2.3-macos-x64.zip",
-                            "checksum": "SHA-256:D81934BA537940201D0A0E4D21E918D2251C195F92082D2B21452860F345AD57",
-                            "size": "777791"
+                            "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-macos-x64.tar.gz",
+                            "archiveFileName": "wchisp-v0.3.0-macos-x64.tar.gz",
+                            "checksum": "SHA-256:EBBF46B0C64BB356CD58DA2683C8809C50BDFE2181969F544933D24C8846F608",
+                            "size": "830611"
                         }
                     ]
                 }

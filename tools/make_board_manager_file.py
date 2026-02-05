@@ -9,11 +9,10 @@ import os
 UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/main/package_ch32v_index.json"
 
 
-MY_VERSION = "1.0.4"
-MY_VERSION_APPENDIX = "+sz9"
-MY_VERSION_FULL = f"{MY_VERSION}{MY_VERSION_APPENDIX}"
+MY_VERSION = "2.0.0"
+MY_VERSION_FULL = f"{MY_VERSION}"
 MY_ARCHIVE_URL = f"https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/{MY_VERSION_FULL}/arduino_core_ch32_sz-{MY_VERSION_FULL}.zip"
-MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}{MY_VERSION_APPENDIX}.zip"
+MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}.zip"
 
 
 my_core_definition = f"""
@@ -48,7 +47,7 @@ my_core_definition = f"""
             {{
                 "packager": "WCH_sz",
                 "name": "wchisp",
-                "version": "0.2.3+sz1"
+                "version": "0.3.0"
             }}
            ]
         }}
@@ -57,26 +56,26 @@ my_core_definition = f"""
 tool_wchisp_definition = f"""
         {{
           "name": "wchisp",
-          "version": "0.2.3+sz1",
+          "version": "0.3.0",
           "systems":
           [
             {{
               "host": "x86_64-linux-gnu",
-              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-linux-x64.tar.gz",
+              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-linux-x64.tar.gz",
               "archiveFileName": "",
               "checksum": "",
               "size": ""
             }},
             {{
               "host": "i686-mingw32",
-              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-win-x64.zip",
+              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-win-x64.zip",
               "archiveFileName": "",
               "checksum": "",
               "size": ""
             }},
             {{
               "host": "x86_64-apple-darwin",
-              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.2.3/wchisp-v0.2.3-macos-x64.zip",
+              "url": "https://github.com/ch32-rs/wchisp/releases/download/v0.3.0/wchisp-v0.3.0-macos-x64.tar.gz",
               "archiveFileName": "",
               "checksum": "",
               "size": ""
