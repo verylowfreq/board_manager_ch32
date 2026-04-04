@@ -10,6 +10,43 @@
                 {
                     "name": "CH32V Boards by M.S.",
                     "architecture": "ch32v",
+                    "version": "2.1.0",
+                    "category": "Contributed",
+                    "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/2.1.0/arduino_core_ch32_sz-2.1.0.zip",
+                    "archiveFileName": "arduino_core_ch32_sz-2.1.0.zip",
+                    "checksum": "SHA-256:71CC0A0197DC688EC5CEE77053D63EBDB6F786974D6F04030D9E783F17761408",
+                    "size": "2556003",
+                    "boards": [
+                        {
+                            "name": "Suzuno32RV, Suzuno32RV Pro Micro, Suzuduino UNO"
+                        }
+                    ],
+                    "toolsDependencies": [
+                        {
+                            "packager": "WCH_sz",
+                            "name": "riscv-none-embed-gcc",
+                            "version": "8.2.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "openocd",
+                            "version": "1.0.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "beforeinstall",
+                            "version": "1.0.0"
+                        },
+                        {
+                            "packager": "WCH_sz",
+                            "name": "wchisp",
+                            "version": "0.3.0"
+                        }
+                    ]
+                },
+                {
+                    "name": "CH32V Boards by M.S.",
+                    "architecture": "ch32v",
                     "version": "2.0.1",
                     "category": "Contributed",
                     "url": "https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/2.0.1/arduino_core_ch32_sz-2.0.1.zip",

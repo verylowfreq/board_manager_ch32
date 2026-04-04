@@ -9,7 +9,7 @@ import os
 UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/main/package_ch32v_index.json"
 
 
-MY_VERSION = "2.0.1"
+MY_VERSION = "2.1.0"
 MY_VERSION_FULL = f"{MY_VERSION}"
 MY_ARCHIVE_URL = f"https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/{MY_VERSION_FULL}/arduino_core_ch32_sz-{MY_VERSION_FULL}.zip"
 MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}.zip"
@@ -26,7 +26,7 @@ my_core_definition = f"""
           "checksum": "",
           "size": "",
           "boards": [
-            {{"name": "CH32V203 Suzuno32RV, Suzuduino UNO"}}
+            {{"name": "Suzuno32RV, Suzuno32RV Pro Micro, Suzuduino UNO"}}
           ],
           "toolsDependencies": [
             {{
