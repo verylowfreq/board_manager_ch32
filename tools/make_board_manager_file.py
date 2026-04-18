@@ -9,7 +9,7 @@ import os
 UPSTREAM_URL = "https://raw.githubusercontent.com/openwch/board_manager_files/main/package_ch32v_index.json"
 
 
-MY_VERSION = "2.1.2"
+MY_VERSION = "2.1.3"
 MY_VERSION_FULL = f"{MY_VERSION}"
 MY_ARCHIVE_URL = f"https://github.com/verylowfreq/arduino_core_ch32_sz/releases/download/{MY_VERSION_FULL}/arduino_core_ch32_sz-{MY_VERSION_FULL}.zip"
 MY_ARCHIVE_FILENAME = f"arduino_core_ch32-sz-{MY_VERSION}.zip"
@@ -168,6 +168,28 @@ def replace_board_name(src:Any) -> Any:
     src["packages"][0]["name"] = "WCH_sz"
     return src
 
+def get_existing_platforms(path:str) -> list[Any]:
+    if not os.path.isfile(path):
+        return []
+    with open(path, "r") as f:
+        defs = json.load(f)
+    return defs["packages"][0].get("platforms", [])
+
+def prepend_platform_with_history(new_platform:Any, old_platforms:list[Any]) -> list[Any]:
+    # Deduplicate by (name, architecture, version), keeping newest entry first.
+    new_key = (
+        new_platform.get("name"),
+        new_platform.get("architecture"),
+        new_platform.get("version"),
+    )
+    merged = [new_platform]
+    for p in old_platforms:
+        old_key = (p.get("name"), p.get("architecture"), p.get("version"))
+        if old_key == new_key:
+            continue
+        merged.append(p)
+    return merged
+
 def main() -> None:
 
     my_json_file = "package_ch32v_index_sz.json"
@@ -185,8 +207,8 @@ def main() -> None:
     upstream_defs['packages'][0]['email'] = ''
     upstream_defs['packages'][0]['help'] = {}
 
-    upstream_defs['packages'][0]['platforms'].clear()
-    upstream_defs['packages'][0]['platforms'].append(coredef)
+    old_platforms = get_existing_platforms(my_json_file)
+    upstream_defs['packages'][0]['platforms'] = prepend_platform_with_history(coredef, old_platforms)
 
     tools = json.loads(tool_wchisp_definition)
     tools = process_tools(tools)
